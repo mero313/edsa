@@ -5,4 +5,5 @@ from .models import People , Custom , Event , Food
 
 
 def country(request):
-    return render(request , 'country.html' , {'people': People.objects.all()})
+    x = {'people': People.objects.all()}
+    return render(request , 'country.html' , x )
