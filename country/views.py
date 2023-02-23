@@ -5,12 +5,13 @@ from .models import People , Custom , Event , Food
 
 
 def country(request): 
-    return render(request , 'country.html' ,  )   
+    x={'people': People.objects.all()}
+    return render(request , 'country.html' , x)   
 
 
 def country_id(request, id):
     x = {'event': Event.objects.get(people_id=People.objects.get(id=id)),
         'people': People.objects.get(id=id),}
-    return render(request , 'country.html' , x  )
+    return render(request , 'country_id.html' , x  )
 
 

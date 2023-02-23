@@ -1,11 +1,9 @@
-<h1> hi  </h1>
+<h1>hi</h1>
 
+{% for x in people %}
 
+<p>{{x.id}}</p>
+<p>{{ x.name }}</p>
+<p>{{ x.description }}</p>
 
-
-<p>
-    {{event}}
-</p>
-
-<p>{{ people }}</p>
-
+{% endfor %}

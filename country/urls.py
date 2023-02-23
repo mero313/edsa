@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
      path('' , views.country , name='country' ),
-    path('<int:id>' , views.country , name='country'),
+    path('<int:id>' , views.country_id , name='country_id'),
     
     
    
