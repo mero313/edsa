@@ -13,7 +13,7 @@ class People(models.Model):
 class Custom(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(null=True)
-    people = models.ForeignKey(People, on_delete=models.CASCADE)
+    people = models.ForeignKey(People, on_delete=models.CASCADE , null=True)
 
     def __str__(self):
         return self.name
@@ -22,7 +22,7 @@ class Event(models.Model):
     name = models.CharField(max_length=100, null=True)
     description = models.TextField( null=True)
     date = models.DateField(null=True)
-    people = models.ManyToManyField(People)
+    people = models.ForeignKey(People , on_delete=models.CASCADE , null=True)
 
     def __str__(self):
         return self.name
@@ -30,7 +30,9 @@ class Event(models.Model):
 class Food(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(null=True)
-    people = models.ManyToManyField(People, related_name='foods')
+    people = models.ManyToManyField(People)
+
+
 
     def __str__(self):
         return self.name
