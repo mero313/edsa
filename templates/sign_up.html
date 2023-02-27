@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1>sign up</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text"  name="username"  placeholder="username"    >
+        <br>
+        <input type="password"  name="passwod"  placeholder="passsword"   >
+        <input type="submit" value="go" >
+
+
+    </form>
 </body>
 </html>
