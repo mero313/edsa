@@ -4,13 +4,12 @@ from .models import sign_in
 # Create your views here.
 
 
-def sign_inq(request, method = 'POST'):
-    username=request.POST.get('username')
-    password=request.POST.get('password')
-    print(username)
-    print(password)
-    data = sign_in(username=username  , password=password)
-    data.save()
+def sign_in1(request):
+    x=request.POST.get('username')
+    y=request.POST.get('password')
+    print(x)
+    print(y)
+    data = sign_in(username=x  , password=y)
     
     return render(request, 'sign_in.html')
     

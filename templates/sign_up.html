@@ -1,22 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/registerc5.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>sign up</h1>
+    <div class='header'>
+        <div class="contine">
+    <div class="menu">
+    <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Countrys.html">Countries</a></li>
+    <li><a href="Login.html">Account</a></li>
+    </ul>
+    </div>
+    <div class="logo">
+    <a href="Home.html"><div class="menu-open"><i class="fa-solid fa-bars"></i></div><h1>W<span>o</span>rldClube</h1></a>
+    </div>
+    <div class='button'>
+    <a href="Login.html" class="sign-in">Login</a>
+    <a href="Register.html" class="sign-up">Sign up</a>
+    </div></div>
+    </div>
+<div class="continer">
+    <div class="txt-con">
+        <div class="head"><h3>Sign up</h3>
+            <p class='pr'>Let’s get you all st up so you can access your personal account.</p></div>
+        <div class="form">
+            <form class="register-form">
+            <div class='formm'>
+            <div>
+                <label for="name">First Name</label>
+                <input id="name-first" type="text" placeholder="Type your name"/>
+            </div>
+            <div>
+                <label for="name">Last Name</label>
+                <input id="name-last" type="text" placeholder="Type your name"/>
+            </div>
+        </div>
+             <div class="formm et">
+                <div class="form-email">
+              <label>Email</label>
+              <input type="email" placeholder="Type your email"/>
+            </div>
+            <div class="form-tel">
+            <label>Phone Number</label>
+              <input type="tel" placeholder="Type your phone"/>
+            </div>
+            </div>
+            <div class='formm-pass'>
+              <label>Password</label>
+              <input type="password" placeholder="password"/>
+            </div>
 
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text"  name="username"  placeholder="username"    >
-        <br>
-        <input type="password"  name="passwod"  placeholder="passsword"   >
-        <input type="submit" value="go" >
-
-
-    </form>
+            <div class='formm-pass'>
+              <label>Confirm Password</label>
+              <input type="password" placeholder="password"/>
+            </div>
+<div class="bottom">            <div class='check'>
+    <input type="checkbox"/><span>I agree to all the <a href=''><b>Terms</b></a> and <a href=''><b>Privacy Policies</b></a></span>
+</div>
+      <a href=""><div class="register-button">Create account</div></a>
+      <p class="message">Don’t have an account? <a href="#">Sign in</a></p></div>
+            </form>
+          </div>
+    </div>
+    {% load static %}
+    <div class="img-con">
+        <img src="{% static  'img/2.png'%}" alt="">
+    </div>
+</div>
+<script>
+    $(function(){$(".menu-open").click(function(){
+        $("body").toggleClass("open-active");
+    });
+    });
+    </script>
 </body>
 </html>
