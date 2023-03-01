@@ -6,8 +6,7 @@ from .models import sign_in
 def sign_in(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
-    data = sign_in(username=username, password=password)
-    data.save()
+    data = sign_in(username, password)
     return render(request, 'sign_in.html')
 
 
