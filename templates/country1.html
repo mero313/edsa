@@ -31,13 +31,15 @@
 <div class="continer">
 <h3 class="title">Find Country to know</h3>
 {% for x in people %}
+{% if x.image %}
 <div class="countrys">
     <div class="country">
-        <a href="Canada.html"><img src="{{x.image}}"/></a>
+        <a href="Canada.html"><img src="{{x.image.url}}"/></a>
         <a href="Canada.html"><h4 class="contryT">{{x.name}}</h4></a>
     </div>
     </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 <footer>

@@ -3,10 +3,17 @@
 
 
 
-
+{% for x in people %}
     
 
-<p> {{people.name}} </p>
+<p> {{x.name}}  </p>
+{% if x.image %}
+       <img src="{{x.image.url}} " alt="444">  
+{% endif %}
+
+
+
+{% endfor %}
 
 
 

@@ -10,8 +10,8 @@ def country1(request):
 
 
 def country(request):
-      y={'people': People.objects.get(id=2)}
-      return render(request , 'country.html' , y)
+    y = {'people': People.objects.all()}
+    return render(request, 'country.html', y)
 
 
 def country_id(request, id):
