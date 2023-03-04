@@ -23,6 +23,6 @@ urlpatterns = [
     path('' , include('home.urls')),
     path('country/' , include('country.urls')),
     path('account/' , include('account.urls'))
-]+ static(settings.MEDIA_URL ,document_root = settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
 
 

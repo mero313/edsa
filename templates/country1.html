@@ -33,7 +33,7 @@
 {% for x in people %}
 <div class="countrys">
     <div class="country">
-        <a href="Canada.html"><img src="{% static 'img/4.png' %}"/></a>
+        <a href="Canada.html"><img src="{{x.image}}"/></a>
         <a href="Canada.html"><h4 class="contryT">{{x.name}}</h4></a>
     </div>
     </div>

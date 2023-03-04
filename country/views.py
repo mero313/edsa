@@ -10,7 +10,7 @@ def country1(request):
 
 
 def country(request):
-      y={'people': People.objects.get(name='ameer')}
+      y={'people': People.objects.get(id=2)}
       return render(request , 'country.html' , y)
 
 
