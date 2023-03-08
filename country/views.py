@@ -18,7 +18,8 @@ def country1(request):
 
 
 def index(request, id):
-    y = {'event': Event.objects.get(people_id=People.objects.get(id=2)),
-         'custom': Custom.objects.get(id=2),
-         'people': People.objects.get(id=2), }
+    y = {'event': Event.objects.get(people_id=People.objects.get(id=id)),
+         'custom': Custom.objects.get(id=id),
+         'people': People.objects.get(id=id),
+          'food': Food.objects.get(id=id) ,}
     return render(request, 'index.html', y)

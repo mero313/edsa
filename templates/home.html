@@ -48,26 +48,18 @@
     <img src="{% static 'img/16.png' %}">
 </div>
 <h3 class="title">Find Country to know</h3>
+{% for x in people %}
+{% if x.image %}
 <div class="countrys">
     <div class="country">
         <a href="canada.html">
             {% load static %}
-            <img src='{% static 'img/4.png' %} '/></a>
-        <a href="canada.html"><h4 class="contryT">Canada</h4></a>
-    </div>
-    <div class="country">
-        <a href="Iceland.html">
-            {% load static %}
-            <img src='{% static 'img/8.png' %}'/></a>
-        <a href="Iceland.html"><h4 class="contryT">Iceland</h4></a>
-    </div>
-    <div class="country">
-        <a href="Turkey.html">
-            {% load static %}
-            <img src='{% static 'img/6.png' %}'/></a>
-        <a href="Turkey.html"><h4 class="contryT">Turkey</h4></a>
+            <img src='{{x.image.url}}'/></a>
+        <a href="#"><h4 class="contryT">{{x.name}}</h4></a>
     </div>
 </div>
+{% endif %}
+{% endfor %}
 <div class="img-con">
     {% load static %}
     <img src="{% static 'img/15.png' %}">

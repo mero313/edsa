@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from country.models import People, Custom , Food, Event
 
 
 # Create your views here.
 
 
 def home(request):
-    return render(request , 'home.html')
+     x = {'people': People.objects.all()}
+     return render(request , 'home.html' , x)
 
 
 def log_in(request):
