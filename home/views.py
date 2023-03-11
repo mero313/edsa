@@ -7,7 +7,7 @@ from country.models import People, Custom , Food, Event
 
 
 def home(request):
-     x = {'people': People.objects.all()}
+     x = {'people': People.objects.all()[:3]  }
      return render(request , 'home.html' , x)
 
 

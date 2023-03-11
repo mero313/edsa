@@ -21,9 +21,9 @@ class Custom(models.Model):
         return self.name
 
 class Event(models.Model):
-    name = models.CharField(max_length=100, null=True)
-    description = models.TextField( null=True)
-    date = models.DateField(null=True)
+    name = models.CharField(max_length=100, null=True , blank=True)
+    description = models.TextField( null=True , blank=True)
+    date = models.DateField(null=True , blank=True)
     people = models.ForeignKey(People , on_delete=models.CASCADE , null=True)
 
     def __str__(self):

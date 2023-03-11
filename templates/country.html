@@ -15,7 +15,7 @@
 <div class="menu">
 <ul>
 <li><a href="/">Home</a></li>
-<li><a href="#">Countries</a></li>
+<li><a href="/country">Countries</a></li>
 </ul>
 </div>
 <div class="logo">
@@ -30,12 +30,13 @@
 <div class='top-img'><img src=" {% static 'img/3.png'  %}   "/></div>
 <div class="continer">
 <h3 class="title">Find Country to know</h3>
+<div>
 {% for x in people %}
 {% if x.image %}
 <div class="countrys">
     <div class="country">
-        <a href="#"><img src="{{x.image.url}}"/></a>
-        <a href="#"><h4 class="contryT">{{x.name}}</h4></a>
+        <a href="{% url 'index' id=x.id %}"><img src="{{x.image.url}}"/></a>
+        <a href="{% url 'index' id=x.id %}"><h4 class="contryT">{{x.name}}</h4></a>
     </div>
     </div>
 </div>
