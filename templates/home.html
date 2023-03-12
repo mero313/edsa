@@ -51,10 +51,10 @@
 {% if x.image %}
 <div class="countrys">
     <div class="country">
-        <a href="#">
+        <a href="{% url 'index' id=x.id %}">
             {% load static %}
             <img src='{{x.image.url}}'/></a>
-        <a href="#"><h4 class="contryT">{{x.name}}</h4></a>
+        <a href="{% url 'index' id=x.id %}"><h4 class="contryT">{{x.name}}</h4></a>
     </div>
 </div>
 {% endif %}
